@@ -9,9 +9,9 @@
 :root{
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    --text-primary: purple ;
+    --text-primary: purple;
     --text-secondary: lightblue;
-    --bg-primary: #232323;
+    --bg-primary: #23232e;
     --bg-secondary: #141418;
 }
 
@@ -47,4 +47,68 @@ main{
     height: 100vh;
     position: fixed;
     background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child{
+    padding-top: auto;
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg{
+    min-width: 2rem;
+    margin:0 1.5rem;
+}
+
+.navbar:hover{
+    width: 16rem;
+}
+
+.navbar:hover .link-text{
+    display: block;
+}
+
+
+.fa-primary {
+    color: coral;
+}
+
+.fa-secondary {
+    color: burlywood;
+}
+
+.fa-primary,
+.fa-secondary{
+    transition: var(--transition-speed);
 }
